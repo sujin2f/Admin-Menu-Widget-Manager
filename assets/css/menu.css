@@ -1,0 +1,20 @@
+form#EVNSCO-admin_menu > ul li {
+  margin-bottom: 20px;
+}
+form#EVNSCO-admin_menu > ul li > span {
+  cursor: pointer;
+  color: #A60000;
+}
+form#EVNSCO-admin_menu > ul li > ul {
+  margin-top: 20px;
+  margin-left: 60px;
+  display: none;
+}
+form#EVNSCO-admin_menu > ul li.no-submenu > span {
+  visibility: hidden;
+}
+#sujin-donation {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
