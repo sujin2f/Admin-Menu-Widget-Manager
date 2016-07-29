@@ -63,6 +63,8 @@ class AdminMenu {
 
 		$this->AdminMenu[ 'menu' ]->style = EVNSCO_PLUGIN_URL . 'assets/css/menu.css';
 		$this->AdminMenu[ 'menu' ]->script = EVNSCO_PLUGIN_URL . 'assets/scripts/min/menu-min.js';
+
+		$this->AdminMenu[ 'menu' ]->plugin = 'Admin Menu & Widget Manager';
 	}
 	private function SetWidgetManager() {
 		$this->AdminMenu[ 'widget' ] = new \WE\AdminPage( 'Widget Manager' );
