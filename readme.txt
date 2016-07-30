@@ -4,7 +4,7 @@ Donate link: http://www.sujinc.com/donation
 Tags: admin, menu, widget, hide, show, control
 Requires at least: 2.8
 Tested up to: 4.5.3
-Stable tag: 3.0.0
+Stable tag: 3.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

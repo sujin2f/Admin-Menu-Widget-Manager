@@ -3,7 +3,7 @@
  * Plugin Name:		Admin Menu & Widget Manager
  * Plugin URI:		http://www.sujinc.com/
  * Description:		Manage Wordpress admin menu and widget
- * Version:				3.0.0
+ * Version:				3.0.1
  * Author:				Sujin 수진 Choi
  * Author URI:		http://www.sujinc.com/
  * License:				GPLv2 or later

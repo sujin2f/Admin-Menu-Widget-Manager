@@ -162,15 +162,19 @@ class AdminMenu {
 	public function EditMenu() {
 		global $menu, $submenu;
 
-		foreach( $this->all_menu as $key => $menu_item ) {
-			if ( array_key_exists( $menu_item[2], $this->data_menu_manager[ 'menu' ] ) )
-				unset( $menu[ $key ] );
+		if ( !empty( $this->data_menu_manager[ 'menu' ] ) ) {
+			foreach( $this->all_menu as $key => $menu_item ) {
+				if ( array_key_exists( $menu_item[2], $this->data_menu_manager[ 'menu' ] ) )
+					unset( $menu[ $key ] );
+			}
 		}
 
-		foreach( $this->all_sub_menu as $menu_key => $menu_item ) {
-			foreach( $menu_item as $sub_menu_key => $sub_menu_item ) {
-				if ( array_key_exists( $sub_menu_item[2], $this->data_menu_manager[ 'submenu' ][ $menu_key ] ) )
-					unset( $submenu[ $menu_key ][ $sub_menu_key ] );
+		if ( !empty( $this->data_menu_manager[ 'submenu' ] ) ) {
+			foreach( $this->all_sub_menu as $menu_key => $menu_item ) {
+				foreach( $menu_item as $sub_menu_key => $sub_menu_item ) {
+					if ( !empty( $this->data_menu_manager[ 'submenu' ][ $menu_key ] ) && array_key_exists( $sub_menu_item[2], $this->data_menu_manager[ 'submenu' ][ $menu_key ] ) )
+						unset( $submenu[ $menu_key ][ $sub_menu_key ] );
+				}
 			}
 		}
 	}
@@ -190,7 +194,6 @@ class AdminMenu {
 	}
 	public function PrintPostTypeJsVars() {
 		$posttypes = "'" . implode( "', '", get_post_types() ) . "'";
-
 		?>
 		<script>
 			var toggle_data_posttypes = [<?php echo $posttypes ?>];
